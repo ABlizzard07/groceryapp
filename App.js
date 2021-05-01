@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation'
 import Home from './screens/HomeScreen'
-import Shop from './screens/ShopScreen'
-import List from './screens/ListScreen'
+import {AppTabNavigator} from './assets/TabNavigator.js'
 
 
 export default class App extends Component{
@@ -15,8 +14,7 @@ export default class App extends Component{
 
 const Navigator = createSwitchNavigator({
    HomeScreen: {screen: Home},
-   ShopScreen: {screen: Shop},
-   ListScreen: {screen: List}
+   Tabs: {screen: AppTabNavigator}
 })
 
 const Container = createAppContainer(Navigator);
